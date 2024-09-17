@@ -15,8 +15,8 @@ public class PlayerController : Animal
 
         if (MainManager.instance.animalChoice == "Llama")
         {
-            moveSpeed = 500;
-            rotSpeed = 400;
+            moveSpeed = 350;
+            rotSpeed = 125;
             jumpForce = 500;
         }
 

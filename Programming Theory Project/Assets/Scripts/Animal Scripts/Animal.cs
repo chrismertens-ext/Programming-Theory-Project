@@ -11,7 +11,6 @@ public abstract class Animal : MonoBehaviour
     public float rotSpeed { get; protected set; } = 20f;
     public float jumpForce { get; protected set; } = 20f;
 
-    protected float moveRange = 17f;
     protected float moveTime;
 
     public bool moveComplete { get; protected set; }
@@ -49,8 +48,8 @@ public abstract class Animal : MonoBehaviour
 
     private void GenerateRandomDirection()
     {
-        float randomX = Random.Range(-moveRange, moveRange);
-        float randomZ = Random.Range(-moveRange, moveRange);
+        float randomX = Random.Range(-MainManager.instance.moveRange, MainManager.instance.moveRange);
+        float randomZ = Random.Range(-MainManager.instance.moveRange, MainManager.instance.moveRange);
 
         cachedRandomDir = new Vector3(randomX, 0, randomZ);
     }
@@ -58,10 +57,11 @@ public abstract class Animal : MonoBehaviour
     protected virtual IEnumerator NPCJump()
     {
         hasJumped = false;
+        float randomJumpTime = Random.Range(2, 10);
         
         animalRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(randomJumpTime);
 
         hasJumped = true;
     }

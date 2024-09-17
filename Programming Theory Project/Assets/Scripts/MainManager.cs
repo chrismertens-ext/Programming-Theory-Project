@@ -9,6 +9,7 @@ public class MainManager : MonoBehaviour
     public string playerName { get; set; }
     public string animalChoice { get; set; }
     public int spawnAmount { get; set; }
+    public float moveRange { get; } = 17f;
 
     private void Awake()
     {

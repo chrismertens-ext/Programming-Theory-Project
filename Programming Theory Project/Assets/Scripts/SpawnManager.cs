@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
-    private bool playerSpawned = false;
+    public bool playerSpawned { get; set; } = false;
     private bool friendsSpawned = false;
 
     [SerializeField] private GameObject[] animalPrefabs;
@@ -31,10 +31,15 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnFriends()
     {
+        float randomXPos = Random.Range(-MainManager.instance.moveRange, MainManager.instance.moveRange);
+        float randomZPos = Random.Range(-MainManager.instance.moveRange, MainManager.instance.moveRange);
+
+        Vector3 randomPos = new Vector3(randomXPos, 0, randomZPos);
+        
         for (int i = 0; i < MainManager.instance.spawnAmount; i++)
         {
             int animalIndex = Random.Range(0, MainManager.instance.spawnAmount);
-            Instantiate(animalPrefabs[animalIndex]);
+            Instantiate(animalPrefabs[animalIndex], randomPos, animalPrefabs[animalIndex].transform.rotation);
         }
 
         friendsSpawned = true;

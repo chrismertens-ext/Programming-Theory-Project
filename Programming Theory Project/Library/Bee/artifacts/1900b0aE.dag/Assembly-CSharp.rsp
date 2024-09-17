@@ -359,8 +359,10 @@
 "Assets/Scripts/Animal Scripts/Elephant.cs"
 "Assets/Scripts/Animal Scripts/Llama.cs"
 "Assets/Scripts/Animal Scripts/Pig.cs"
+"Assets/Scripts/FollowPlayer.cs"
 "Assets/Scripts/MainManager.cs"
 "Assets/Scripts/MenuUIHandler.cs"
+"Assets/Scripts/NameBannerFollow.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/SpawnManager.cs"
 -langversion:9.0
