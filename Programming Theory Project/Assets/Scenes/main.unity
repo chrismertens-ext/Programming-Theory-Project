@@ -187,6 +187,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f02c4fe082663a44b7ce480a1f30127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 1918568640203918091, guid: 78a5bfa18c0788645b30591059200130, type: 3}
+  - {fileID: 6958984192264476302, guid: 3822c4b8bea3018459fa4d911fc74af7, type: 3}
+  - {fileID: 1103932924176137462, guid: 2dcaf18a077abef4da9a331fff5eae49, type: 3}
+  - {fileID: 1634637047151383498, guid: f2333d5c0e4e7304cb6b4f4a92393484, type: 3}
+  - {fileID: 2815519769094781538, guid: 3c14baec57c0fd543991819f68a97714, type: 3}
+  - {fileID: 2148279536830104911, guid: 47e43574308e73d43be51f105425e857, type: 3}
 --- !u!4 &162885092
 Transform:
   m_ObjectHideFlags: 0

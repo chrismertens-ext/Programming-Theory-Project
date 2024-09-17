@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Elephant : MonoBehaviour
+public class Elephant : Animal
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Awake()
     {
-        
-    }
+        isPlayer = false;
+        moveComplete = true;
+        hasJumped = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        moveSpeed = 20000;
+        rotSpeed = 16000;
+        jumpForce = 20000;
+
+        animalRb = GetComponent<Rigidbody>();
     }
 }

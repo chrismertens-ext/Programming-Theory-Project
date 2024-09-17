@@ -8,8 +8,10 @@ public class MenuUIHandler : MonoBehaviour
 {
     [SerializeField] private GameObject titleScreen;
     [SerializeField] private GameObject chooseAnimalScreen;
+    [SerializeField] private GameObject setFriendsScreen;
     [SerializeField] private TMP_InputField playerNameInput;
     [SerializeField] private TMP_Dropdown animalSelectDropdown;
+    [SerializeField] private TMP_InputField numberOfFriendsInput;
     
     // Start is called before the first frame update
     public void SubmitName()
@@ -27,6 +29,15 @@ public class MenuUIHandler : MonoBehaviour
         animalSelectDropdown.GetComponent<TMP_Dropdown>();
         MainManager.instance.animalChoice = animalSelectDropdown.options[animalSelectDropdown.value].text;
 
+        chooseAnimalScreen.SetActive(false);
+        setFriendsScreen.SetActive(true);
+    }
+
+    public void StartGame()
+    {
+        numberOfFriendsInput.GetComponent<TMP_InputField>();
+        MainManager.instance.spawnAmount = int.Parse(numberOfFriendsInput.text);
+        
         SceneManager.LoadScene(1);
     }
 }

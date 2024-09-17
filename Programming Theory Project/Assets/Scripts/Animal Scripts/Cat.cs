@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cat : MonoBehaviour
+public class Cat : Animal
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Awake()
     {
-        
-    }
+        isPlayer = false;
+        moveComplete = true;
+        hasJumped = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        moveSpeed = 50;
+        rotSpeed = 40;
+        jumpForce = 50;
+
+        animalRb = GetComponent<Rigidbody>();
     }
 }

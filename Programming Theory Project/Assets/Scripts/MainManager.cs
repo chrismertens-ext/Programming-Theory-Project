@@ -8,6 +8,7 @@ public class MainManager : MonoBehaviour
 
     public string playerName { get; set; }
     public string animalChoice { get; set; }
+    public int spawnAmount { get; set; }
 
     private void Awake()
     {

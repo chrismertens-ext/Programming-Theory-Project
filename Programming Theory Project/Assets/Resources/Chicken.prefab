@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6523376258550829437}
   - component: {fileID: -2850975540517767960}
   - component: {fileID: 7091397867270953660}
+  - component: {fileID: -116795963578929326}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -136,8 +137,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6958984192264476302}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 2.5
+  m_Drag: 0.5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -153,5 +154,17 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &-116795963578929326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958984192264476302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9543c4cc9e046654391c266fbef49ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
