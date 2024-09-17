@@ -3076,9 +3076,9 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Rabbit
+    - m_Text: Cat
       m_Image: {fileID: 0}
-    - m_Text: Lion
+    - m_Text: Elephant
       m_Image: {fileID: 0}
     - m_Text: Llama
       m_Image: {fileID: 0}

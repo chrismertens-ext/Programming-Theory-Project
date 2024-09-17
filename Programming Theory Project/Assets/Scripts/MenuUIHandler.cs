@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MenuUIHandler : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class MenuUIHandler : MonoBehaviour
     {
         playerNameInput.GetComponent<TMP_InputField>();
         MainManager.instance.playerName = playerNameInput.text;
-        Debug.Log(MainManager.instance.playerName);
+
         titleScreen.SetActive(false);
         chooseAnimalScreen.SetActive(true);
     }
@@ -25,6 +26,7 @@ public class MenuUIHandler : MonoBehaviour
     {
         animalSelectDropdown.GetComponent<TMP_Dropdown>();
         MainManager.instance.animalChoice = animalSelectDropdown.options[animalSelectDropdown.value].text;
-        Debug.Log(MainManager.instance.animalChoice);
+
+        SceneManager.LoadScene(1);
     }
 }
