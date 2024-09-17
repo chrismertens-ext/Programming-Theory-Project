@@ -5,6 +5,8 @@ using UnityEngine;
 public abstract class Animal : MonoBehaviour
 {
     protected Rigidbody animalRb;
+
+    // ENCAPSULATION
     public bool isPlayer { get; protected set; }
 
     public float moveSpeed { get; protected set; } = 20f;
@@ -46,6 +48,7 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     private void GenerateRandomDirection()
     {
         float randomX = Random.Range(-MainManager.instance.moveRange, MainManager.instance.moveRange);
@@ -54,6 +57,7 @@ public abstract class Animal : MonoBehaviour
         cachedRandomDir = new Vector3(randomX, 0, randomZ);
     }
 
+    // ABSTRACTION
     protected virtual IEnumerator NPCJump()
     {
         hasJumped = false;
@@ -66,6 +70,7 @@ public abstract class Animal : MonoBehaviour
         hasJumped = true;
     }
 
+    // ABSTRACTION
     IEnumerator FaceTravelDirection()
     {
         Quaternion startRotation = transform.rotation;
@@ -88,6 +93,7 @@ public abstract class Animal : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     protected virtual IEnumerator MoveAnimal()
     {
         moveComplete = false;

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : Animal
 {
+    // POLYMORPHISM
     protected override void Awake()
     {
         isPlayer = true;
